@@ -41,6 +41,8 @@ CREATE TABLE incident (
     assassinated BOOLEAN DEFAULT FALSE,
     witnessess INT DEFAULT 0,
     revenged BOOLEAN DEFAULT FALSE,
+    severity_level INT NOT NULL DEFAULT 5,
+    time_of_incident INT NOT NULL DEFAULT 1800,
     PRIMARY KEY (incident_id),
     FOREIGN KEY (assassin_id) REFERENCES assassin(assassin_id),
     FOREIGN KEY (place_id) REFERENCES place(place_id)
